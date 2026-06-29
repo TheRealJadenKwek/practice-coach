@@ -1,5 +1,8 @@
 # Practice Coach — Changelog
 
+## v1.0.1
+- Polished the mod icon — rounded corners and a light outline to match the rest of the index.
+
 ## v1.0.0
 First public release.
 

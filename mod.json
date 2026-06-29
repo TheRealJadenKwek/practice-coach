@@ -3,7 +3,7 @@
     "gd": { "win": "2.2081", "mac": "2.2081" },
     "id": "jaden.practice-coach",
     "name": "Practice Coach",
-    "version": "v1.0.0",
+    "version": "v1.0.1",
     "developer": "Jaden",
     "description": "Adaptive practice-mode consistency HUD: death-hotspot heatmap, persistent reach/fail history, and a difficulty-aware next-goal recommendation.",
     "tags": ["gameplay", "interface", "utility"],
