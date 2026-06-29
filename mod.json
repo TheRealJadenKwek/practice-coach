@@ -1,0 +1,23 @@
+{
+    "geode": "5.7.1",
+    "gd": { "win": "2.2081", "mac": "2.2081" },
+    "id": "jaden.practice-coach",
+    "name": "Practice Coach",
+    "version": "v1.0.0",
+    "developer": "Jaden",
+    "description": "Adaptive practice-mode consistency HUD: death-hotspot heatmap, persistent reach/fail history, and a difficulty-aware next-goal recommendation.",
+    "tags": ["gameplay", "interface", "utility"],
+    "links": {
+        "source": "https://github.com/TheRealJadenKwek/practice-coach"
+    },
+    "settings": {
+        "enable-hud":        { "type": "bool",  "name": "Enable HUD",                     "description": "Show the Practice Coach overlay in practice mode.",                         "default": true },
+        "show-mini-map":     { "type": "bool",  "name": "Show heat-strip mini-map",       "description": "Draw the green/red consistency strip along the bottom of the screen.",      "default": true },
+        "max-attempts":      { "type": "int",   "name": "Attempts kept per level",        "description": "Rolling history size per level. Lifetime totals are never lost.",          "default": 300,  "min": 50,  "max": 5000, "control": { "slider": true } },
+        "min-reach-trust":   { "type": "int",   "name": "Min reaches to trust a section", "description": "A hotspot is only 'trusted' (acted on) after you reach it this many times.", "default": 8,    "min": 3,   "max": 50 },
+        "cold-start-runs":   { "type": "int",   "name": "Full runs before recommending",  "description": "How many full runs to log before the coach starts naming a target.",        "default": 8,    "min": 3,   "max": 50 },
+        "target-pass-floor": { "type": "float", "name": "Section reliable at pass-rate",   "description": "A section counts as 'solid' once its pass-rate is at least this.",          "default": 0.85, "min": 0.5, "max": 0.99 },
+        "recency-lambda":    { "type": "float", "name": "Recency weighting",                "description": "How fast old runs fade from the math. 1.0 = all runs count equally; lower = recent runs dominate, so the coach tracks your current skill.", "default": 0.98, "min": 0.90, "max": 1.00 },
+        "show-clear-odds":   { "type": "bool",  "name": "Show full-clear odds",             "description": "Show an estimated 0-100% clear chance (product of your section pass-rates) to gauge when you're ready for normal mode.", "default": true }
+    }
+}

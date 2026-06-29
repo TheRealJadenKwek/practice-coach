@@ -1,0 +1,15 @@
+# build output
+/build/
+/build-*/
+*.geode
+
+# cmake / ide
+.cache/
+.vs/
+.vscode/
+CMakeUserPresets.json
+
+# local dev artifacts
+build_out.txt
+logo_96.png
+build.ps1
